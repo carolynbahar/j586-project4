@@ -1,0 +1,45 @@
+.header{
+    background-color: #f35d4b;
+    margin-bottom: 2em;
+}
+
+.header img{
+    width: 10%;
+}
+
+h1{
+    color: #f35d4b;
+}
+
+body{
+    font-family: Avenir;
+}
+
+.photo{
+    color: white;
+    height: 400px;
+    width: 100%;
+    vertical-align: center;
+    background-color: #f35d4b;
+    
+}
+
+.tweets{
+    width: 95%;
+    border: none;
+    font-family: Avenir;
+    height: 95%;
+}
+
+.outline{
+    border: solid 2px #f35d4b;
+    height: 400px;
+    text-align: center;
+}
+
+.footer{
+    color: white;
+    background-color: #f35d4b;
+    height: 75px;
+    
+}
