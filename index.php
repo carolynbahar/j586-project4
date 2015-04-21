@@ -1,4 +1,13 @@
 <link href="css/twitter-style.css" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/tweetLinkIt.js"></script>
+
+
+<script>
+    function pageComplete(){
+        $('.tweet').tweetLinkify();
+    }
+</script>
 
 <?php
 ini_set('display_errors', 1);
@@ -18,6 +27,7 @@ $settings = array(
 $url = 'https://api.twitter.com/1.1/search/tweets.json';
 $getfield = '?q=%23creativesouthga&count=20';
 
+
 $requestMethod = 'GET';
 $twitter = new TwitterAPIExchange($settings);
 /**echo $twitter->setGetfield($getfield)
@@ -27,18 +37,21 @@ $twitter = new TwitterAPIExchange($settings);
 $string = json_decode($twitter->setGetfield($getfield)
                       ->buildOauth($url, $requestMethod)
                       ->performRequest(),$assoc = TRUE);
+
                       
 foreach($string['statuses'] as $items)
     {
         $userArray = $items['user'];
         
         echo "<div class='left'><a href='http://www.twitter.com/" . $userArray['screen_name'] . "' target='_blank'><img src='" . $userArray['profile_image_url'] . "' target='_blank'></a></div>";
-        echo "<a href='http://www.twitter.com/" . $userArray['screen_name'] . "'>" . $userArray['name'] . " &nbsp; @" . $userArray['screen_name'] . "</a><br/></div>";
-        echo $items['text'] . "<br/>";
-        echo strtotime("dateString") . "<br/></div>";
+        echo "<a href='http://www.twitter.com/" . $userArray['screen_name'] . "' target='_blank'>" . $userArray['name'] . " &nbsp; @" . $userArray['screen_name'] . "</a><br/></div>";
+        echo "<div class='tweet' target='_blank'>" . $items['text'] . "</div><br/>";
+        //echo strtotime("dateString") . "<br/></div>";
         
-        echo date( 'm-d H:i:s', strtotime($items['created_at']) ) . "<br/><br/>";
+        //echo date( 'm-d H:i:s', strtotime($items['created_at']) ) . "<br/><br/>";
 
-        
+        echo "<script>pageComplete();</script>";
         echo "<hr/>";
+
     }
+

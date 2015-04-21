@@ -3,6 +3,15 @@
   src: url('../fonts/AvenirLTStd-Book.otf'); /* IE9 Compat Modes */
 }
 
+a{
+    color: #f35d4b;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #f35d4b;
+}
+
 .right{
     float: right;
 }
@@ -38,8 +47,10 @@ body{
     width: 95%;
     border: none;
     font-family: Avenir;
-    height: 95%;
+    height: 90%;
 }
+
+
 
 .map{
     padding-top: 5px;

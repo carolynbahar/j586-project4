@@ -16,6 +16,15 @@
         var myLatlng3 = {lat: 49.2827, lng: -123.1207}
         var myLatlng4 = {lat: 39.0997, lng: -94.5783}
         var myLatlng5 = {lat: -33.7181, lng: 150.3106}
+        var myLatlng6 = {lat: 28.5961, lng: -81.3467}
+        var myLatlng7 = {lat: 41.4822, lng: -81.6697}
+        var myLatlng8 = {lat: 28.4158, lng: -81.2989}
+        var myLatlng9 = {lat: 40.6928, lng: -73.9903}
+        var myLatlng10 = {lat: 35.9886, lng: -78.9072}
+        var myLatlng11 = {lat: 39.9500, lng: -75.1667}
+        var myLatlng12 = {lat: 33.4667, lng: -81.9667}
+        var myLatlng13 = {lat: 42.3314, lng: -83.0458}
+        var myLatlng14 = {lat: 33.7714, lng: -84.2978}
 
 
         
@@ -43,6 +52,33 @@
         });
         var infowindow5 = new google.maps.InfoWindow({
           content: "<h1>Dave & Laura Coleman</h1> arkansas haghbegjsrtjbg"
+        });
+        var infowindow6 = new google.maps.InfoWindow({
+          content: "<h1>Will & Susana Gay</h1> arkansas haghbegjsrtjbg"
+        });
+        var infowindow7 = new google.maps.InfoWindow({
+          content: "<h1>Aaron Sechrist</h1> arkansas haghbegjsrtjbg"
+        });
+        var infowindow8 = new google.maps.InfoWindow({
+          content: "<h1>Shauna Lynn Panczyszyn</h1> arkansas haghbegjsrtjbg"
+        });
+        var infowindow9 = new google.maps.InfoWindow({
+          content: "<h1>Jen Mussari</h1> arkansas haghbegjsrtjbg"
+        });
+        var infowindow10 = new google.maps.InfoWindow({
+          content: "<h1>Lenny Terenzi</h1> arkansas haghbegjsrtjbg"
+        });
+        var infowindow11 = new google.maps.InfoWindow({
+          content: "<h1>Octavius Newman</h1> arkansas haghbegjsrtjbg"
+        });
+        var infowindow12 = new google.maps.InfoWindow({
+          content: "<h1>Jason Craig</h1> arkansas haghbegjsrtjbg"
+        });
+        var infowindow13 = new google.maps.InfoWindow({
+          content: "<h1>Molly Jacques</h1> arkansas haghbegjsrtjbg"
+        });
+        var infowindow14 = new google.maps.InfoWindow({
+          content: "<h1>Brian Manley</h1> arkansas haghbegjsrtjbg"
         });
         
         
@@ -73,6 +109,50 @@
          map: dataMap1,
          title: 'Dave & Laura Coleman'
         });
+        var marker6 = new google.maps.Marker({
+         position: myLatlng6,
+         map: dataMap1,
+         title: 'Will & Susana Gay'
+        });
+        var marker7 = new google.maps.Marker({
+         position: myLatlng7,
+         map: dataMap1,
+         title: 'Aaron Sechrist'
+        });
+        var marker8 = new google.maps.Marker({
+         position: myLatlng8,
+         map: dataMap1,
+         title: 'Shauna Lynn Panczyszyn'
+        });
+        var marker9 = new google.maps.Marker({
+         position: myLatlng9,
+         map: dataMap1,
+         title: 'Jen Mussari'
+        });
+        var marker10 = new google.maps.Marker({
+         position: myLatlng10,
+         map: dataMap1,
+         title: 'Lenny Terenzi'
+        });
+        var marker11 = new google.maps.Marker({
+         position: myLatlng11,
+         map: dataMap1,
+         title: 'Octavius Newman'
+        });
+        var marker12 = new google.maps.Marker({
+         position: myLatlng12,
+         map: dataMap1,
+         title: 'Jason Craig'
+        });
+        var marker13 = new google.maps.Marker({
+         position: myLatlng13,
+         map: dataMap1,
+         title: 'Molly Jacques'
+        });var marker14 = new google.maps.Marker({
+         position: myLatlng14,
+         map: dataMap1,
+         title: 'Brian Manley'
+        });
         
         
         // FOURTH CHANGE
@@ -90,6 +170,33 @@
   });
         google.maps.event.addListener(marker5, 'click', function() {
     infowindow5.open(dataMap1,marker5);
+  });
+        google.maps.event.addListener(marker6, 'click', function() {
+    infowindow6.open(dataMap1,marker6);
+  });
+        google.maps.event.addListener(marker7, 'click', function() {
+    infowindow7.open(dataMap1,marker7);
+  });
+        google.maps.event.addListener(marker8, 'click', function() {
+    infowindow8.open(dataMap1,marker8);
+  });
+        google.maps.event.addListener(marker9, 'click', function() {
+    infowindow9.open(dataMap1,marker9);
+  });
+    google.maps.event.addListener(marker10, 'click', function() {
+    infowindow10.open(dataMap1,marker10);
+  });
+    google.maps.event.addListener(marker11, 'click', function() {
+    infowindow11.open(dataMap1,marker11);
+  });
+    google.maps.event.addListener(marker12, 'click', function() {
+    infowindow12.open(dataMap1,marker12);
+  });
+    google.maps.event.addListener(marker13, 'click', function() {
+    infowindow13.open(dataMap1,marker13);
+  });
+    google.maps.event.addListener(marker14, 'click', function() {
+    infowindow14.open(dataMap1,marker14);
   });
         
 
