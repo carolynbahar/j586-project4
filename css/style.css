@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirLTStd-Book.otf'); /* IE9 Compat Modes */
+}
+
+.right{
+    float: right;
+}
+
 .header{
     background-color: #f35d4b;
     margin-bottom: 2em;
@@ -25,14 +34,42 @@ body{
 }
 
 .tweets{
+    padding-top: 5px;
     width: 95%;
     border: none;
     font-family: Avenir;
     height: 95%;
 }
 
+.map{
+    padding-top: 5px;
+    width: 100%;
+    border: none;
+    font-family: Avenir;
+    height: 100%;
+}
+
+.insta{
+    padding-top: 5px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 380px;
+}
+
+a:link .tweets{
+    color: green;
+}
+
+.icon{
+    margin: 5px;
+}
+
+.box{
+    height: 400px;
+}
+
 .outline{
-    border: solid 2px #f35d4b;
+    padding-top: 1em;
     height: 400px;
     text-align: center;
 }

@@ -1,3 +1,5 @@
+<link href="css/twitter-style.css" rel="stylesheet">
+
 <?php
 ini_set('display_errors', 1);
 require_once('TwitterAPIExchange.php');
@@ -14,7 +16,7 @@ $settings = array(
 /** Perform a GET request and echo the response **/
 /** Note: Set the GET field BEFORE calling buildOauth(); **/
 $url = 'https://api.twitter.com/1.1/search/tweets.json';
-$getfield = '?q=%23cs15&count=20';
+$getfield = '?q=%23creativesouthga&count=20';
 
 $requestMethod = 'GET';
 $twitter = new TwitterAPIExchange($settings);
@@ -30,11 +32,10 @@ foreach($string['statuses'] as $items)
     {
         $userArray = $items['user'];
         
-        echo "<a href='http://www.twitter.com/" . $userArray['screen_name'] . "'><img src='" . $userArray['profile_image_url'] . "'></a>";
-        echo $result->$items['profile_image_url'];
-        echo "<b>" . $userArray['name'] . "</b> &nbsp; @" . $userArray['screen_name'] . "<br/>";
+        echo "<div class='left'><a href='http://www.twitter.com/" . $userArray['screen_name'] . "' target='_blank'><img src='" . $userArray['profile_image_url'] . "' target='_blank'></a></div>";
+        echo "<a href='http://www.twitter.com/" . $userArray['screen_name'] . "'>" . $userArray['name'] . " &nbsp; @" . $userArray['screen_name'] . "</a><br/></div>";
         echo $items['text'] . "<br/>";
-        echo strtotime("dateString") . "<br/>";
+        echo strtotime("dateString") . "<br/></div>";
         
         echo date( 'm-d H:i:s', strtotime($items['created_at']) ) . "<br/><br/>";
 

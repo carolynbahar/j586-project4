@@ -1,0 +1,13 @@
+body{
+    font-family: Avenir;
+}
+
+a{
+    color: #f35d4b;
+    text-decoration: none;
+}
+
+.left{
+    float:left;
+    margin-right: 1em;
+}
